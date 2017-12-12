@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<emojiPage:BaseContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:EmojiApp"
+             xmlns:emojiPage="clr-namespace:EmojiApp.Infrastructure.Page"
+             x:TypeArguments="local:ViewModels.MainPageViewModel"
+             x:Class="EmojiApp.MainPage">
+    
+    <emojiPage:BaseContentPage.Content>
+        <StackLayout Padding="5">
+            <Entry Text="{Binding TextToSpeak}" Placeholder="Text to speak" />
+            <Button Text="{Binding TextToSpeak}" Command="{Binding Speak}" />
+            <Image Source="addison.png"></Image>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" />
+        </StackLayout>
+    </emojiPage:BaseContentPage.Content>
+
+</emojiPage:BaseContentPage>
