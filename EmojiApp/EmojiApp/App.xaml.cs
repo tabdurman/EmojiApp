@@ -1,4 +1,5 @@
 ﻿
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace EmojiApp
@@ -26,5 +27,6 @@ namespace EmojiApp
 		{
 			// Handle when your app resumes
 		}
+
 	}
 }

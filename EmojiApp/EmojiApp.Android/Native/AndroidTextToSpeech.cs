@@ -30,6 +30,9 @@ namespace EmojiApp.Droid.Native
             }
         }
 
-
+        public string Version()
+        {
+            return "Android 1.0";
+        }
     }
 }

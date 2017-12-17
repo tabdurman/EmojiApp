@@ -24,5 +24,10 @@ namespace EmojiApp.iOS.Native
             speechSynthesizer.SpeakUtterance(speechUtterance);
         }
 
+        public string Version()
+        {
+            return "iOS 1.0";
+        }
+
     }
 }

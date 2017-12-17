@@ -79,10 +79,12 @@ namespace EmojiApp.ViewModels
         {
             IsBusy = false;
             ShowBusy = new Command(async () => await OnShowBusy(), () => !IsBusy);
-            Speak = new Command(() =>
+            Speak = new Command(async () =>
             {
-                //DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
-                IoCContainerFactory.GetContainer().Get<ITextToSpeech>().Speak(TextToSpeak);
+                ITextToSpeech textToSpeech = IoCContainerFactory.GetContainer().Get<ITextToSpeech>();
+
+                //bool result=await App.Current.MainPage.DisplayAlert("Will speak",String.Format("Using version {0}",textToSpeech.Version()),"Ok","Cancel");
+                textToSpeech.Speak(TextToSpeak);
             });
 
         }
